@@ -19,13 +19,13 @@ public class Yahoo_Test {
 
     @BeforeMethod
     public void setUp() {
-        // Set up WebDriver before each test
+        // Set up WebDriver before test
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
     @Test
-    public void testCase1() throws InterruptedException {
+    public void YahooTest() throws InterruptedException {
 
         // Task 01-------------------------------------------------------------------------
         // Navigate to the Yahoo website and maximize the browser
@@ -76,17 +76,13 @@ public class Yahoo_Test {
         Assert.assertTrue(isSearchResultPresent);
 
 
-
-
-
-
     }
 
    
 
     @AfterMethod
-    public void tearDown() {
-        // Close the browser after each test
+    public void closebrowser() {
+        // Close browser after each test
         driver.quit();
     }
 }
